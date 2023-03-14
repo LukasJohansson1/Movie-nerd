@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 0;
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 70px;
+  font-family: Dancing Script, cursive;
+}
+
+header {
+  height: 125px;
+  background-color: #a9def9;
+}
