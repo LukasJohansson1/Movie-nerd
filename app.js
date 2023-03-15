@@ -38,10 +38,7 @@ async function Results(results) {
     <div class="result">
       <h2>${object.title}</h2>
       <p>${object.overview}</p>
-    
-      <p>Popularity: ${object.popularity}</p>
       <p>Rating: ${object.vote_average}</p>
-      <p>Language: ${object.original_language}</p>
       <p>Release date: ${object.release_date}</p>
       <img class="poster" src="https://image.tmdb.org/t/p/w500${object.poster_path}" alt="${object.title} poster image">
     </div>
