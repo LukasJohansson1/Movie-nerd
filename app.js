@@ -25,25 +25,25 @@ async function searching(searchString) {
 
 async function Results(results) {
   let resultDiv = document.getElementById("searchresults")
+
+  resultDiv.innerHTML = "";
   
 
   let allObjects = results.results
 
   for (let index = 0; index < allObjects.length; index++) {
     const object = allObjects[index]
-    console.log("loopar igenom objekten ", object)
 
     const movieDiv = document.createElement("div")
     movieDiv.innerHTML = `
-    <div class="result">
-      <h2>${object.title}</h2>
-      <p>${object.overview}</p>
-      <p>Rating: ${object.vote_average}</p>
-      <p>Release date: ${object.release_date}</p>
-      <img class="poster" src="https://image.tmdb.org/t/p/w500${object.poster_path}" alt="${object.title} poster image">
-    </div>
-    `
-    movieDiv.classList.add("resultat")
+      <div>
+        <h2>${object.title}</h2>
+        <div class="result-inner">
+          <p class="overview">${object.overview}</p>
+          <p class="release">Release date: ${object.release_date}</p>
+        </div>
+        <img class="poster" src="https://image.tmdb.org/t/p/w500${object.poster_path}" alt="${object.title} poster image">
+      </div>`
     resultDiv.appendChild(movieDiv)
-  }
-}
+    movieDiv.classList.add("result")  
+}}
