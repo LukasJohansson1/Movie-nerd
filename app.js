@@ -14,15 +14,17 @@ searchT.onkeydown = async function (event) {
   }
 }
 async function searching(searchString) {
+  try {
+    const apiKey = "e7eef1471de1734d3b86b16d987d108f" 
+    const url = `https://api.themoviedb.org/3/search/movie?query=${searchString}&api_key=${apiKey}`
+    
+      let response = await fetch(url)
+      let json = await response.json()
+      return json
+    } catch(error){
 
-  const apiKey = "e7eef1471de1734d3b86b16d987d108f" 
-  const url = `https://api.themoviedb.org/3/search/movie?query=${searchString}&api_key=${apiKey}`
-   
-    let response = await fetch(url)
-    let json = await response.json()
-    return json
   }
-
+}
 async function Results(results) {
   let resultDiv = document.getElementById("searchresults")
 
@@ -31,7 +33,7 @@ async function Results(results) {
 
   let allObjects = results.results
 
-  for (let index = 0; index < allObjects.length; index++) {
+  for (let index = 0; index < 8; index++) {
     const object = allObjects[index]
 
     const movieDiv = document.createElement("div")
@@ -43,7 +45,15 @@ async function Results(results) {
           <p class="release">Release date: ${object.release_date}</p>
         </div>
         <img class="poster" src="https://image.tmdb.org/t/p/w500${object.poster_path}" alt="${object.title} poster image">
+        <button class="add">Add to list</button>
       </div>`
     resultDiv.appendChild(movieDiv)
     movieDiv.classList.add("result")  
 }}
+
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const mobileNav = document.querySelector('.mobile-nav');
+
+hamburgerBtn.addEventListener('click', () => {
+  mobileNav.classList.toggle('show');
+});
