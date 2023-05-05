@@ -51,6 +51,13 @@ h1 {
   border: none;
 }
 
+form {
+  display: flex;
+  width: 100%;
+  background-image: url(searchbg.jpg);
+  height: 35vh;
+  align-items: center;
+}
 .hamburger .bar,
 .hamburger:after,
 .hamburger:before {
@@ -124,7 +131,7 @@ h1 {
 }
 
 footer {
-  margin-top: 5vh;
+  margin-top: 45vh;
   width: 100%;
   background-color: #c1afa0;
   height: 100px;
@@ -169,22 +176,20 @@ h2 {
 .release {
   font-size: 18px;
 }
-.about {
-  border: solid black 2px;
-  padding: 40px;
-  width: 75%;
-  margin: 80vh auto 0;
-  border-radius: 3%;
-}
-
-.about p {
-  font-size: 16px;
-  margin-top: 10px;
-  font-family: "Alegerya", sans-serif;
-}
 
 .add {
   background-color: green;
+  border-radius: 10%;
+  width: 85px;
+  height: 40px;
+  font-size: 16px;
+  margin: 0 0 50px 530px;
+  border: solid black 2px;
+}
+
+.remove {
+  background-color: red;
+  color: white;
   border-radius: 10%;
   width: 85px;
   height: 40px;

@@ -45,7 +45,7 @@ async function Results(results) {
           <p class="release">Release date: ${object.release_date}</p>
         </div>
         <img class="poster" src="https://image.tmdb.org/t/p/w500${object.poster_path}" alt="${object.title} poster image">
-        <button class="add">Add to list</button>
+        <button class="add">Add</button>
       </div>`
     resultDiv.appendChild(movieDiv)
     movieDiv.classList.add("result")  
@@ -56,4 +56,23 @@ const mobileNav = document.querySelector('.mobile-nav');
 
 hamburgerBtn.addEventListener('click', () => {
   mobileNav.classList.toggle('show');
+});
+
+
+// Get all buttons with class "add"
+const buttons = document.querySelectorAll(".add");
+
+// Add click event listener to each button
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Toggle "red" class on button
+    button.classList.toggle("red");
+
+    // Change button text
+    if (button.textContent === "Add") {
+      button.textContent = "Remove";
+    } else {
+      button.textContent = "Add";
+    }
+  });
 });
