@@ -45,7 +45,8 @@ async function Results(results) {
           <p class="release">Release date: ${object.release_date}</p>
         </div>
         <img class="poster" src="https://image.tmdb.org/t/p/w500${object.poster_path}" alt="${object.title} poster image">
-        <button class="add">Add</button>
+        <button class="find" onclick="window.open('https://www.themoviedb.org/movie/${object.id}', '_blank')">Find out more</button>
+        <button class="add" onclick="addlist(btns)" >Add</button>
       </div>`
     resultDiv.appendChild(movieDiv)
     movieDiv.classList.add("result")  
@@ -59,20 +60,23 @@ hamburgerBtn.addEventListener('click', () => {
 });
 
 
-// Get all buttons with class "add"
-const buttons = document.querySelectorAll(".add");
+const btns = document.querySelectorAll('.add');
 
-// Add click event listener to each button
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    // Toggle "red" class on button
-    button.classList.toggle("red");
-
-    // Change button text
-    if (button.textContent === "Add") {
-      button.textContent = "Remove";
-    } else {
-      button.textContent = "Add";
-    }
+function addlist(btns) {
+  btns.forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('add');
+      button.classList.toggle('remove');
+      console.log("hej");
+  
+      if (button.classList.contains('remove')) {
+        button.innerText = 'Remove';
+      } else {
+        button.innerText = 'Add';
+      }
+    });
   });
-});
+  }
+
+
+  
