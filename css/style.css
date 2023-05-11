@@ -207,6 +207,10 @@ h2 {
 .find:hover {
   background-color: gray;
 }
+
+a {
+  color: black;
+}
 @media only screen and (max-width: 1000px) {
 }
 
