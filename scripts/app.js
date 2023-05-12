@@ -45,9 +45,11 @@ async function Results(results) {
           <p class="release">Release date: ${object.release_date}</p>
         </div>
         <img class="poster" src="https://image.tmdb.org/t/p/w500${object.poster_path}" alt="${object.title} poster image">
-        <button class="find" onclick="window.open('https://www.themoviedb.org/movie/${object.id}', '_blank')">Find out more</button>
-        <button class="add" onclick="addlist(btns)" >Add</button>
-        <button class="remove show" >Remove</button>
+        <div>
+          <button class="find" onclick="window.open('https://www.themoviedb.org/movie/${object.id}', '_blank')">Find out more</button>
+          <button class="add" onclick="addlist(btns)" >Add</button>
+          <button class="remove show" >Remove</button>
+        </div>
       </div>`
     resultDiv.appendChild(movieDiv)
     movieDiv.classList.add("result")  

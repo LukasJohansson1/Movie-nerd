@@ -236,7 +236,7 @@ a {
     width: 100%;
   }
   .overview {
-    margin: 0 auto;
+    margin: 0;
     font-size: 14px;
   }
   .result {
@@ -245,7 +245,7 @@ a {
     margin: 20px 0;
   }
   .poster {
-    height: 175px;
+    height: 185px;
   }
   .release {
     font-size: 16px;
