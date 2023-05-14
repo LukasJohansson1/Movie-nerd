@@ -116,7 +116,7 @@ form {
   width: 46%;
   background-color: #c1afa0;
   padding: 10px;
-  height: 420px;
+  height: 440px;
   margin: 25px 10px;
   border-radius: 5px;
 }
@@ -185,6 +185,7 @@ h2 {
   font-size: 16px;
   float: right;
   border: solid black 2px;
+  margin-right: 10px;
 }
 
 .remove {
@@ -202,6 +203,10 @@ h2 {
   border-radius: 11%;
   border: solid 2px black;
   background-color: #4bb3fd;
+}
+
+.hide {
+  display: none;
 }
 
 .find:hover {
