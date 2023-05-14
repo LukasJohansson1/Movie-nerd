@@ -76,6 +76,7 @@ function addToLocalStorage(movie) {
 }
 
 
+
 // const addBtns = document.querySelectorAll('.add');
 // const removeBtns = document.querySelectorAll('.remove');
 

@@ -177,6 +177,13 @@ h2 {
   font-size: 18px;
 }
 
+#title {
+  font-size: 45px;
+  text-align: center;
+  background-color: #c1afa0;
+  padding: 10px;
+  font-family: "Quicksand", sans-serif;
+}
 .add {
   background-color: green;
   border-radius: 10%;
@@ -216,6 +223,18 @@ h2 {
 a {
   color: black;
 }
+
+.list {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: solid 2px black;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #d2b48c;
+  height: 410px;
+}
+
 @media only screen and (max-width: 1000px) {
   h1 {
     font-size: 90px;
