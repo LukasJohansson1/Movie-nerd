@@ -57,6 +57,7 @@ async function Results(results) {
     const addButton = movieDiv.querySelector('.add');
     addButton.addEventListener('click', () => {
       addToLocalStorage(object);
+      removeToLocalStorage()
     });
   }
 }

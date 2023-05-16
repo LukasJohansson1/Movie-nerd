@@ -9,15 +9,16 @@
   </head>
   <body>
     <header>
-      <h1>Movie nerd sign up</h1>
+      <h1>Movie nerd</h1>
     </header>
+    <div class="undertitle"><h2>Sign up, It's free</h2></div>
     <div class="container">
       <div class="boxar">
         <label for="name">Name</label>
         <input
           id="name"
-          placeholder="Victor anderson"
-          pattern="[A-Å\sa-z]{3,20}"
+          placeholder="Victor Anderson"
+          pattern="[A-Å\sa-z]{2,20}"
           required
         />
       </div>
@@ -31,11 +32,21 @@
         />
       </div>
       <div class="boxar">
-        <label for="passowrd">Password</label>
+        <label for="password">Password</label>
         <input type="password" id="password" required />
       </div>
       <button type="submit" onclick="register()">Register</button>
     </div>
+    <div class="list-container">
+      <h3>Our values</h3>
+      <ul class="lorem-ipsum-list">
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetur adipiscing elit</li>
+        <li>Sed do eiusmod tempor incididunt</li>
+        <li>Ut labore et dolore magna aliqua</li>
+        <li>Ut enim ad minim veniam</li>
+      </ul>
+    </div>
+    <script src="scripts/sign-up.js"></script>
   </body>
-  <script src="scripts/sign-up.js"></script>
 </html>

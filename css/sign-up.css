@@ -7,12 +7,7 @@
 }
 
 body {
-  width: 100vw;
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), transparent),
-    url(sign-up-bg.jpg);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: cover;
+  background-color: #eeeeee;
 }
 h1 {
   font-size: 40px;
@@ -21,12 +16,13 @@ h1 {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 45%;
-  float: left;
+  width: 50%;
   padding: 25px;
-  background-image: linear-gradient(to right, grey, #6f5e54);
-  height: 72vh;
+  margin: 30px auto 0 auto;
+  height: fit-content;
+  background-color: #c4dfdf;
+  border-radius: 15px;
+  border: solid black 2px;
 }
 
 .boxar {
@@ -66,9 +62,43 @@ button:hover {
 }
 header {
   display: flex;
-  background-color: #6f5e54;
-  width: 100vw;
+  background-color: #c4dfdf;
   justify-content: center;
   height: 150px;
   align-items: center;
+}
+
+.undertitle {
+  background-image: url(sign-up-bg.jpg);
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 45px;
+  color: white;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 25px;
+  margin: 150px auto 30px auto;
+  height: fit-content;
+  background-color: #c4dfdf;
+  border-radius: 15px;
+  border: solid black 2px;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+li {
+  font-size: 18px;
 }
