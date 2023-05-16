@@ -47,7 +47,6 @@ async function Results(results) {
         <img class="poster" src="https://image.tmdb.org/t/p/w500${object.poster_path}" alt="${object.title} poster image">
         <div>
           <button class="find" onclick="window.open('https://www.themoviedb.org/movie/${object.id}', '_blank')">Find out more</button>
-          <button class="remove" >Remove</button>
           <button class="add" >Add</button>
         </div>
       </div>`;
